@@ -59,4 +59,6 @@ import { MainPageComponent } from './views/main-page/main-page.component';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}
