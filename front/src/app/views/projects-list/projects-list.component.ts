@@ -3,6 +3,7 @@ import { MatTable } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { ProjectsListDataSource, ProjectsListItem } from './projects-list-datasource';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-projects-list',
@@ -17,10 +18,11 @@ export class ProjectsListComponent implements AfterViewInit {
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = ['id', 'name'];
-
+  constructor(private LoginService: LoginService){}
   ngAfterViewInit(): void {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
     this.table.dataSource = this.dataSource;
+    console.log(this.LoginService.isConnected);
   }
 }

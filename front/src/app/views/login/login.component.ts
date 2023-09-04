@@ -20,11 +20,4 @@ export class LoginComponent {
 
   constructor (private LoginService: LoginService){}
 
-  ngOnInit(): void {
-    this.LoginService.findAll().subscribe(data => {
-      if(data){
-        //console.log(data[0].username);
-      }
-    })
-  }
 }

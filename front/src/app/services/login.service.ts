@@ -6,6 +6,7 @@ import { User } from './../models/user';
   providedIn: 'root'
 })
 export class LoginService extends BaseService {
+  isConnected = false;
   getByUsername(username: string){
     return this.http.get<User>(this.url.concat('/'+ username));
   }

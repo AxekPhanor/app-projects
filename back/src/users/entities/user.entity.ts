@@ -1,1 +1,3 @@
-export class User {}
+export class User {
+  constructor(id: number, username: string) {}
+}
