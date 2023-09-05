@@ -15,7 +15,7 @@ import { DialogComponent } from './dialog/dialog.component'
 })
 export class LoginComponent {
 
-  @Input() spinner?: boolean = false;
+  @Input() spinner: boolean = false;
 
   private breakpointObserver = inject(BreakpointObserver);
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)

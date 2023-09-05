@@ -20,20 +20,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login-page/login.component';
 import { LoginFormComponent } from './components/login-page/login-form/login-form.component';
-import { ProjectsListComponent } from './components/main-page/projects-list/projects-list.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { DialogComponent } from './components/login-page/dialog/dialog.component';
+import { ProjectsListComponent } from './components/main-page/projects-list/projects-list.component';
+import { EditAddPageComponent } from './components/edit-add-page/edit-add-page.component';
+import { FormComponent } from './components/edit-add-page/form/form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     LoginFormComponent,
-    ProjectsListComponent,
     MainPageComponent,
+    ProjectsListComponent,
+    EditAddPageComponent,
+    FormComponent,
   ],
   imports: [
     BrowserModule,

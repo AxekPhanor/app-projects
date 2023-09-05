@@ -8,7 +8,7 @@ import { User } from './../models/user';
 export class LoginService extends BaseService {
 
   getByUsername(username: string){
-    return this.http.get<User>(this.url.concat('/'+ username));
+    return this.http.get<User>(this.url.concat('users/'+ username));
   }
 
   isConnected(){
@@ -16,5 +16,9 @@ export class LoginService extends BaseService {
   }
   isDisconnected(){
     sessionStorage.setItem('isConnected', 'false');
+  }
+
+  findAll(){
+    return this.http.get<any>(this.url);
   }
 }

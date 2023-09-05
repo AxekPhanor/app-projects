@@ -9,17 +9,15 @@ import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http'
   providedIn: 'root'
 })
 export abstract class BaseService {
-
-  url = 'http://localhost:3000/users';
-
-  constructor(protected http: HttpClient) { }
+  url: string;
+  constructor(protected http: HttpClient) {
+    this.url = 'http://localhost:3000/';
+  }
 
   getById(id: number): Observable<any> {
     return this.http.get<any>(this.url);
   }
 
-  findAll(): Observable<any> {
-    return this.http.get<any>(this.url);
-  }
+  abstract findAll(): Observable<any>;
 
 }
