@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { Data } from './data';
 
 @Injectable()
@@ -9,6 +9,6 @@ export class UsersService {
         return Data.users[i];
       }
     }
-    return `User not found`;
+    throw new NotFoundException('User not found');
   }
 }

@@ -8,5 +8,9 @@ export class Data {
       id: 2,
       username: 'axek',
     },
+    {
+      id: 3,
+      username: 'Axek',
+    },
   ];
 }

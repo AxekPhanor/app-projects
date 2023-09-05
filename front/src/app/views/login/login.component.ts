@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, Input, SimpleChanges, inject } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
@@ -11,6 +11,8 @@ import { LoginService } from './../../services/login.service';
 })
 export class LoginComponent {
 
+  @Input() spinner?: boolean = false;
+
   private breakpointObserver = inject(BreakpointObserver);
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -18,6 +20,13 @@ export class LoginComponent {
       shareReplay()
     );
 
-  constructor (private LoginService: LoginService){}
+  constructor(private LoginService: LoginService) { }
 
+  isSpinning(spinner: boolean) {
+    this.spinner = spinner;
+  }
+
+  ngOnInit() {
+    this.LoginService.isDisconnected();
+  }
 }
