@@ -3,8 +3,8 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Output, EventEmitter } from '@angular/core';
 
-import { LoginService } from './../../services/login.service';
-import { User } from './../../models/user';
+import { LoginService } from './../../../services/login.service';
+import { User } from './../../../models/user';
 import { timeout } from 'rxjs';
 
 @Component({
@@ -15,6 +15,7 @@ import { timeout } from 'rxjs';
 export class LoginFormComponent {
 
   @Output() eventSpinner = new EventEmitter<boolean>();
+  @Output() eventUserNotFound = new EventEmitter<boolean>();
 
   user = new User();
   private fb = inject(FormBuilder);
@@ -44,7 +45,7 @@ export class LoginFormComponent {
       },
       error: (e) => {
         if (e.status === 404) {
-          //alert(e.message);
+          this.eventUserNotFound.emit(true);
         }
       },
     });

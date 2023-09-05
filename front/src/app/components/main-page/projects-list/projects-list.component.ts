@@ -3,7 +3,7 @@ import { MatTable } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { ProjectsListDataSource} from './projects-list-datasource';
-import { Project } from '../../models/project';
+import { Project } from '../../../models/project';
 import { LoginService } from 'src/app/services/login.service';
 
 @Component({

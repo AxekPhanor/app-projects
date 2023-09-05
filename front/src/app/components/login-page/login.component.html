@@ -4,7 +4,7 @@
       <span>app-projects</span>
     </mat-toolbar>
     <!-- Add Content Here -->
-    <app-login-form (eventSpinner)="isSpinning($event)" class="formLogin"></app-login-form>
+    <app-login-form (eventUserNotFound)="openDialog()" (eventSpinner)="isSpinning($event)" class="formLogin"></app-login-form>
     <mat-progress-spinner *ngIf=spinner [diameter]="70" class="spinner" mode="indeterminate"></mat-progress-spinner>
   </mat-sidenav-content>
 </mat-sidenav-container>

@@ -14,16 +14,18 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http';
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './views/login/login.component';
-import { LoginFormComponent } from './views/login-form/login-form.component';
-import { ProjectsListComponent } from './views/projects-list/projects-list.component';
+import { LoginComponent } from './components/login-page/login.component';
+import { LoginFormComponent } from './components/login-page/login-form/login-form.component';
+import { ProjectsListComponent } from './components/main-page/projects-list/projects-list.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-import { MainPageComponent } from './views/main-page/main-page.component';
+import { MainPageComponent } from './components/main-page/main-page.component';
+import { DialogComponent } from './components/login-page/dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +56,8 @@ import { MainPageComponent } from './views/main-page/main-page.component';
     MatPaginatorModule,
     MatSortModule,
     MatProgressSpinnerModule,
+    MatButtonModule,
+    MatDialogModule,
   ],
   providers: [
     HttpClientModule,
