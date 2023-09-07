@@ -5,8 +5,7 @@ import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { LoginService } from './../../services/login.service';
-import { DialogComponent } from './dialog/dialog.component'
-
+import { DialogService } from '../../services/dialog.service';
 
 @Component({
   selector: 'app-login',
@@ -24,14 +23,14 @@ export class LoginComponent {
       shareReplay()
     );
 
-  constructor(private LoginService: LoginService, public dialog: MatDialog) { }
+  constructor(private LoginService: LoginService, private DialogService: DialogService, public dialog: MatDialog) { }
 
   isSpinning(spinner: boolean) {
     this.spinner = spinner;
   }
 
   openDialog(){
-    this.dialog.open(DialogComponent);
+    this.DialogService.userNotFound();
   }
 
   ngOnInit() {

@@ -1,1 +1,15 @@
-<router-outlet></router-outlet>
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <span>app-projects</span>
+      <a class="logout" href="/login">
+        <span color="secondary" class="material-icons">logout</span>
+      </a>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,14 +1,11 @@
 import { Injectable } from '@nestjs/common';
-import { CreateProjectDto } from './dto/create-project.dto';
-import { UpdateProjectDto } from './dto/update-project.dto';
+import { ProjectDto } from './dto/project.dto';
 import { Data } from './data';
 
 @Injectable()
 export class ProjectsService {
-  create(createProjectDto: CreateProjectDto) {
-    console.log(createProjectDto);
-    Data.projects.push(createProjectDto);
-    return createProjectDto;
+  create(projectDto: ProjectDto) {
+    Data.projects.push(projectDto);
   }
 
   findAll() {
@@ -16,11 +13,17 @@ export class ProjectsService {
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} project`;
+    for (const project of Data.projects) {
+      if (project.id === id) {
+        return project;
+      }
+    }
   }
 
-  update(id: number, updateProjectDto: UpdateProjectDto) {
-    return `This action updates a #${id} project`;
+  update(id: number, projectDto: ProjectDto) {
+    id--;
+    Data.projects[id]['reference'] = projectDto.reference;
+    Data.projects[id]['description'] = projectDto.description;
   }
 
   remove(id: number) {

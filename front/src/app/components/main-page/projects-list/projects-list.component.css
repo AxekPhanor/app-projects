@@ -1,11 +1,17 @@
-.card {
-  margin-top: 10px;
-}
-
-.card .list{
-  max-width: 400px;
-}
-
 .list{
-  height: 100%;
+  min-height: 200px;
+}
+
+mat-card{
+  height: 190px;
+  width: 1200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.editButton{
+  background-color: #43a047;
+  right: 1em;
+  bottom: 1em;
+  position: absolute;
 }

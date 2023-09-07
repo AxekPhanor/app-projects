@@ -37,3 +37,16 @@
 .description {
   height: 50%;
 }
+
+.btnCancel{
+  position: absolute;
+  text-decoration: none;
+  right: 0;
+  margin-right: 10%;
+}
+
+.btnSubmit{
+  margin-left: 10px;
+  text-decoration: none;
+}
+

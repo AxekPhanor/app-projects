@@ -24,7 +24,6 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MainPageComponent } from './components/main-page/main-page.component';
-import { DialogComponent } from './components/login-page/dialog/dialog.component';
 import { ProjectsListComponent } from './components/main-page/projects-list/projects-list.component';
 import { EditAddPageComponent } from './components/edit-add-page/edit-add-page.component';
 import { FormComponent } from './components/edit-add-page/form/form.component';

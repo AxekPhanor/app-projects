@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { ProjectsService } from '../../../services/projects.service';
 import { Project } from 'src/app/models/project';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-projects-list',
@@ -11,7 +12,7 @@ export class ProjectsListComponent {
 
   projects: Project[] = [];
 
-  constructor(private ProjectsService: ProjectsService){}
+  constructor(private router: Router, private ProjectsService: ProjectsService){}
 
   ngOnInit() {
     this.ProjectsService.findAll().subscribe({
@@ -25,5 +26,7 @@ export class ProjectsListComponent {
     });
   }
 
-
+  navigateToForm(){
+    this.router.navigateByUrl('/edit-add');
+  }
 }

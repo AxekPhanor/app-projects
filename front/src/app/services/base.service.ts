@@ -15,7 +15,7 @@ export abstract class BaseService {
   }
 
   getById(id: number): Observable<any> {
-    return this.http.get<any>(this.url);
+    return this.http.get<any>(this.url+'/'+id);
   }
 
   abstract findAll(): Observable<any>;

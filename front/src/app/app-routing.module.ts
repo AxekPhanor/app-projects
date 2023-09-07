@@ -8,6 +8,7 @@ const routes: Routes = [
   {path: 'projects', component: MainPageComponent},
   {path: 'login', component: LoginComponent},
   {path: 'edit-add', component: EditAddPageComponent},
+  {path: 'edit-add/:id', component: EditAddPageComponent},
   {path: '', redirectTo: '/login', pathMatch: 'full'},
 
 ];

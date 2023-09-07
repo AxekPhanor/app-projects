@@ -15,4 +15,8 @@ export class ProjectsService extends BaseService {
   createProject(project: Project){
     return this.http.post<Project>(this.url, {id: project.id, reference: project.reference, description: project.description});
   }
+
+  updateProject(project: Project){
+    return this.http.patch<Project>(this.url+'/'+project.id, {id: project.id, reference: project.reference, description: project.description});
+  }
 }

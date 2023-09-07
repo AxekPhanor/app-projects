@@ -2,12 +2,15 @@
   <mat-list-item role="listitem" class="list" *ngFor="let project of projects">
     <mat-card class="card">
       <mat-card-header>
-        <mat-card-title>{{project.reference}}</mat-card-title>
-        <mat-card-subtitle>{{project.id}}</mat-card-subtitle>
+        <mat-card-title><span>{{project.id}} - </span>{{project.reference}}</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
         <p>{{project.description}}</p>
       </mat-card-content>
+      <mat-card-actions>
+        <a href="/edit-add/{{project.id}}"><button class="editButton" mat-button><span class="text">EDIT</span></button></a>
+      </mat-card-actions>
     </mat-card>
   </mat-list-item>
 </mat-list>

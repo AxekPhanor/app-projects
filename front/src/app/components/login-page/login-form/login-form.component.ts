@@ -38,10 +38,8 @@ export class LoginFormComponent {
     this.user.username = this.addressForm.value.username!;
     this.LoginService.getByUsername(this.user.username).subscribe({
       next: (data) => {
-        if (data) {
-          this.LoginService.isConnected();
-          this.redirect();
-        }
+        this.LoginService.isConnected();
+        this.redirect();
       },
       error: (e) => {
         if (e.status === 404) {

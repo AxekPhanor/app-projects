@@ -1,17 +1,18 @@
-.sidenav-container {
-  height: 100%;
+.button-container {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  margin-right: 15px;
 }
 
-.sidenav {
-  width: 200px;
+.content {
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
-.sidenav .mat-toolbar {
-  background: inherit;
-}
-
-.mat-toolbar.mat-primary {
-  position: sticky;
-  top: 0;
-  z-index: 1;
+.logout{
+  position: absolute;
+  right: 25px;
+  text-decoration: none;
+  color: inherit;
 }
