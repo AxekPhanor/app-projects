@@ -56,4 +56,4 @@ To do:
 - Feature to be added 2
 
 ## Contact
-Créer par [@AxekPhanor] 
+Créer par [@AxekPhanor](https://github.com/AxekPhanor)
