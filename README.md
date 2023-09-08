@@ -56,4 +56,5 @@ To do:
 - Feature to be added 2
 
 ## Contact
+[@flynerdpl](https://www.flynerd.pl/)
 Créer par [@AxekPhanor](https://github.com/AxekPhanor)
