@@ -13,7 +13,7 @@
 <!-- * [License](#license) -->
 
 
-## Informations Générale
+## Informations Générales
 - Provide general information about your project here.
 - What problem does it (intend to) solve?
 - What is the purpose of your project?
