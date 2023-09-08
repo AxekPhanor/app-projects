@@ -10,7 +10,6 @@ import { map, shareReplay } from 'rxjs';
   styleUrls: ['./edit-add-page.component.css']
 })
 export class EditAddPageComponent {
-
   constructor(private router: Router) { }
 
   ngOnInit(): void {
@@ -18,6 +17,7 @@ export class EditAddPageComponent {
       this.redirect();
     }
   }
+
   redirect() {
     this.router.navigateByUrl('/login');
   }

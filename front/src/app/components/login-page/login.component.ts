@@ -13,7 +13,6 @@ import { DialogService } from '../../services/dialog.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-
   @Input() spinner: boolean = false;
 
   private breakpointObserver = inject(BreakpointObserver);
@@ -23,7 +22,10 @@ export class LoginComponent {
       shareReplay()
     );
 
-  constructor(private LoginService: LoginService, private DialogService: DialogService, public dialog: MatDialog) { }
+  constructor(
+    private LoginService: LoginService,
+    private DialogService: DialogService,
+    public dialog: MatDialog) { }
 
   isSpinning(spinner: boolean) {
     this.spinner = spinner;

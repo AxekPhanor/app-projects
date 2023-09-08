@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent {
-
   constructor(private router: Router) { }
 
   ngOnInit(): void {

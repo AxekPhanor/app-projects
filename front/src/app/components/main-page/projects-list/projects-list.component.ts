@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./projects-list.component.css']
 })
 export class ProjectsListComponent {
-
   projects: Project[] = [];
 
   constructor(private router: Router, private ProjectsService: ProjectsService){}

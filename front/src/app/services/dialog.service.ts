@@ -6,8 +6,8 @@ import { DialogComponent } from '../components/dialog/dialog.component';
   providedIn: 'root'
 })
 export class DialogService {
-
   constructor(private dialog: MatDialog) {}
+
   addProject() {
     this.dialog.open(DialogComponent,{
       data:{

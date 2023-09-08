@@ -14,14 +14,17 @@ import { ActivatedRoute } from '@angular/router';
 export class FormComponent {
   project = new Project();
 
-  private fb = inject(FormBuilder);
+  private fb = inject(FormBuilder); //creation du formulaire
   addressForm = this.fb.group({
     id: [null, Validators.required],
     reference: [null, Validators.required],
     description: [null, Validators.required],
   });
 
-  constructor(private ProjectsService: ProjectsService, private DialogService: DialogService, private route: ActivatedRoute) { }
+  constructor(
+    private ProjectsService: ProjectsService,
+    private DialogService: DialogService,
+    private route: ActivatedRoute) { }
 
   ngOnInit() {
     if(this.project.id == null){
