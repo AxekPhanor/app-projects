@@ -1,6 +1,6 @@
 # app-projects
 > app-projects est application web avec une page de connexion, et une liste des projets où on peut ajouter ou modifier un projet.
-> Demo disponible [ ici ](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
+> Demo disponible [ici](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
 
 ## Table of Contents
 * [Information Générales](#general-information)
@@ -22,16 +22,17 @@
 
 
 ## Technologies utilisées
-- Tech 1 - version 1.0
-- Tech 2 - version 2.0
-- Tech 3 - version 3.0
+- Node: 18.17.1
+- Angular: 16.2.3
+- Nest - 10.1.16
+- Angular Material - 16.2.3
 
 
 ## Fonctionnalitées
-List the ready features here:
-- Awesome feature 1
-- Awesome feature 2
-- Awesome feature 3
+Fonctionnalités disponible :
+- Page de connexion
+- Page avec la liste des projets
+- Page pour editer ou ajouter un projet
 
 
 ## Installation
@@ -41,19 +42,15 @@ Proceed to describe how to install / setup one's local environment / get started
 
 
 ## Etat du projet
-Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
+Le projet est : _en cours_ 
 
 
 ## Améliorations possible
-Include areas you believe need improvement / could be improved. Also add TODOs for future development.
 
-Room for improvement:
-- Improvement to be done 1
-- Improvement to be done 2
-
-To do:
-- Feature to be added 1
-- Feature to be added 2
+Améliorations possible:
+- Ajouter une base de données
+- Avoir une connexion sécurisé utilisant OAuth2
+- Pouvoir supprimer un projet
 
 ## Contact
 Créer par [@AxekPhanor](https://github.com/AxekPhanor)
