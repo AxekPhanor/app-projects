@@ -1,6 +1,6 @@
 # app-projects
 > app-projects est application web avec une page de connexion, et une liste des projets où on peut ajouter ou modifier un projet.
-> Live demo [_here_](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
+> Demo disponible [ ici ](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
 
 ## Table of Contents
 * [Information Générales](#general-information)
