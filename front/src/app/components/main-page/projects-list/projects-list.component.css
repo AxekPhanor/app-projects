@@ -1,17 +1,46 @@
 .list{
   min-height: 200px;
+  width: 100%;
+
+
 }
 
 mat-card{
   height: 190px;
   width: 1200px;
-  overflow-y: auto;
-  overflow-x: hidden;
+
 }
 
+p{
+  width: 1080px;
+  height: 110px;
+  overflow-wrap: break-word;
+  overflow-y: auto;
+  white-space: normal;
+}
+
+
 .editButton{
-  background-color: #43a047;
   right: 1em;
   bottom: 1em;
   position: absolute;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+  margin-left: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 5px;
 }
