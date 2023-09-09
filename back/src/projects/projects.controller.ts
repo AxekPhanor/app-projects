@@ -8,15 +8,15 @@ import {
   Delete,
 } from '@nestjs/common';
 import { ProjectsService } from './projects.service';
-import { ProjectDto } from './dto/project.dto';
+import { Project } from './entities/project.entity';
 
 @Controller('projects')
 export class ProjectsController {
   constructor(private readonly projectsService: ProjectsService) {}
 
   @Post()
-  create(@Body() projectDto: ProjectDto) {
-    this.projectsService.create(projectDto);
+  create(@Body() project: Project) {
+    this.projectsService.create(project);
   }
 
   @Get()
@@ -30,8 +30,8 @@ export class ProjectsController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() projectDto: ProjectDto) {
-    return this.projectsService.update(+id, projectDto);
+  update(@Param('id') id: string, @Body() project: Project) {
+    return this.projectsService.update(+id, project);
   }
 
   @Delete(':id')

@@ -1,11 +1,11 @@
 import { Injectable } from '@nestjs/common';
-import { ProjectDto } from './dto/project.dto';
+import { Project } from './entities/project.entity';
 import { Data } from './data';
 
 @Injectable()
 export class ProjectsService {
-  create(projectDto: ProjectDto) {
-    Data.projects.push(projectDto);
+  create(project: Project) {
+    Data.projects.push(project);
   }
 
   findAll() {
@@ -20,10 +20,10 @@ export class ProjectsService {
     }
   }
 
-  update(id: number, projectDto: ProjectDto) {
+  update(id: number, project: Project) {
     id--;
-    Data.projects[id]['reference'] = projectDto.reference;
-    Data.projects[id]['description'] = projectDto.description;
+    Data.projects[id]['reference'] = project.reference;
+    Data.projects[id]['description'] = project.description;
   }
 
   remove(id: number) {
