@@ -21,8 +21,6 @@
 - Why did you undertake it?
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
-connect : mongodb+srv://axek:WKWToP58bCHVtWCI@cluster0.bacgnq9.mongodb.net/
-
 
 ## Technologies utilisées
 - Node: 18.17.1
