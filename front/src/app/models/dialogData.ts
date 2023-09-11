@@ -3,4 +3,5 @@ export interface DialogData {
   content: string;
   buttonLabel: string;
   style: string;
+  href: string;
 }

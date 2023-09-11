@@ -10,6 +10,14 @@ export class LoginService extends BaseService {
     return this.http.get<User>(this.url.concat('users/'+ username));
   }
 
+  setUserId(id: string){
+    sessionStorage.setItem('userId', id);
+  }
+
+  getUserId(){
+    return sessionStorage.getItem('userId');
+  }
+
   isConnected(){
     sessionStorage.setItem('isConnected', 'true');
   }

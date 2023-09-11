@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ProjectsService } from '../../../services/projects.service';
+import { LoginService } from '../../../services/login.service';
 import { Project } from 'src/app/models/project';
 import { Router } from '@angular/router';
 
@@ -11,10 +12,10 @@ import { Router } from '@angular/router';
 export class ProjectsListComponent {
   projects: Project[] = [];
 
-  constructor(private router: Router, private ProjectsService: ProjectsService){}
+  constructor(private router: Router, private ProjectsService: ProjectsService, private LoginService: LoginService){}
 
   ngOnInit() {
-    this.ProjectsService.findAll().subscribe({
+    this.ProjectsService.findAllFromUser(this.LoginService.getUserId()!).subscribe({
       next: (data: any) => {
         if(data) {
           this.projects = data;

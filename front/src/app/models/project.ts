@@ -1,11 +1,13 @@
 export class Project {
-  id?: number;
+  _id?: string;
   reference?: string;
   description?: string;
+  user_id?: string;
 
-  constructor(id?: number, reference?: string, description?: string) {
-    this.id = id;
+  constructor(_id?: string, reference?: string, description?: string, user_id?: string) {
+    this._id = _id;
     this.reference = reference;
     this.description = description;
+    this.user_id = user_id;
   };
 }

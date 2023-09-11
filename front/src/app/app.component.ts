@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'app-projects';
   @Input() loginState?: boolean;
   constructor(public LoginService: LoginService){}
-  ngOnInit() {
+  ngDoCheck() {
     this.loginState = (this.LoginService.getState() === 'true') ? true : false;
   }
 }

@@ -14,18 +14,22 @@
 
 
 ## Informations Générales
+
 - Provide general information about your project here.
 - What problem does it (intend to) solve?
 - What is the purpose of your project?
 - Why did you undertake it?
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
+connect : mongodb+srv://axek:WKWToP58bCHVtWCI@cluster0.bacgnq9.mongodb.net/
+
 
 ## Technologies utilisées
 - Node: 18.17.1
 - Angular: 16.2.3
-- Nest - 10.1.16
 - Angular Material - 16.2.3
+- Nest - 10.1.16
+- MongoDB - 6.0.9
 
 
 ## Fonctionnalitées
@@ -48,9 +52,10 @@ Le projet est : _en cours_
 ## Améliorations possible
 
 Améliorations possible:
-- Ajouter une base de données
 - Avoir une connexion sécurisé utilisant OAuth2
 - Pouvoir supprimer un projet
 
 ## Contact
 Créer par [@AxekPhanor](https://github.com/AxekPhanor)
+
+

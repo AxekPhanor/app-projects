@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Project } from 'src/app/models/project';
 import { ProjectsService } from '../../../services/projects.service';
+import { LoginService } from '../../../services/login.service';
 import { DialogService } from '../../../services/dialog.service';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
@@ -22,23 +23,28 @@ export class FormComponent {
   });
 
   constructor(
+    private LoginService: LoginService,
     private ProjectsService: ProjectsService,
     private DialogService: DialogService,
     private route: ActivatedRoute) { }
 
   ngOnInit() {
-    if(this.project.id == null){
-      this.getProject();
+    const id = this.route.snapshot.paramMap.get('id');
+    if(id != null){
+      console.log("test");
+      this.getProject(id);
     }
   }
 
   onSubmit() {
     this.project.reference = this.addressForm.value.reference!;
     this.project.description = this.addressForm.value.description!;
-    if (this.project.id == null) { //--- ADD FORM PART ---//
-      this.project.id = Number(sessionStorage.getItem('projectsQuantity')) + 1; // TODO: A MODIFIER PAR UN APPEL DU BACK
+    if (this.project._id == null) { //--- ADD FORM PART ---//
+      this.project.user_id = this.LoginService.getUserId()!;
+      console.log(this.project._id);
       this.ProjectsService.createProject(this.project).subscribe({
         next: data => {
+          console.log(data);
           this.DialogService.addProject();
         }
       });
@@ -54,12 +60,12 @@ export class FormComponent {
     }
   }
 
-  getProject() {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.ProjectsService.getById(id).subscribe({
+  getProject(id: string) {
+    this.ProjectsService.findOne(id!).subscribe({
       next: data => {
         if (data) { // TODO: REMOVE 'IF' AND CALL ERROR
-          this.project.id = data.id;
+          console.log(data);
+          this.project._id = data._id;
           this.project.reference = data.reference;
           this.project.description = data.description;
         }

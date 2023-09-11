@@ -8,15 +8,23 @@ import { Project } from '../models/project';
 export class ProjectsService extends BaseService {
   override url = 'http://localhost:3000/projects';
 
+  findOne(_id: string){
+    return this.http.get<Project>(this.url+'/'+_id)
+  }
+
   findAll(){
     return this.http.get<Project>(this.url);
   }
 
+  findAllFromUser(userId: string){
+    return this.http.get<Project>(this.url+'/user='+userId);
+  }
+
   createProject(project: Project){
-    return this.http.post<Project>(this.url, {id: project.id, reference: project.reference, description: project.description});
+    return this.http.post<Project>(this.url, {reference: project.reference, description: project.description, user_id: project.user_id});
   }
 
   updateProject(project: Project){
-    return this.http.patch<Project>(this.url+'/'+project.id, {id: project.id, reference: project.reference, description: project.description});
+    return this.http.patch<Project>(this.url+'/'+project._id, {reference: project.reference, description: project.description, user_id: project.user_id});
   }
 }

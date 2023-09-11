@@ -14,7 +14,8 @@ export class DialogService {
         title: "New projects",
         content: "a new project has been created",
         buttonLabel:"return to projects list",
-        style:""
+        style:"",
+        href: "projects"
       }
     });
   }
@@ -25,8 +26,8 @@ export class DialogService {
         title: "Edit project",
         content: "the project has been edited",
         buttonLabel:"return to projects list",
-        style:""
-
+        style:"",
+        href: "projects"
       }
     });
   }
@@ -37,7 +38,8 @@ export class DialogService {
         title: "User not found",
         content: "This username doesn't exist",
         buttonLabel:"close",
-        style:"red"
+        style:"red",
+        href: "login"
       }
     });
   }

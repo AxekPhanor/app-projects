@@ -1,4 +1,9 @@
 export class User {
-  constructor(public id?: number, public username?: string) {
+  _id?: string;
+  username?: string;
+
+  constructor(_id?: string, username?: string) {
+    this._id = _id;
+    this.username = username;
   };
 }

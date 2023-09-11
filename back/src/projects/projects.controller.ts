@@ -8,30 +8,41 @@ import {
   Delete,
 } from '@nestjs/common';
 import { ProjectsService } from './projects.service';
-import { Project } from './entities/project.entity';
+import { CreateProjectDto } from './dto/create-project.dto';
+import { UpdateProjectDto } from './dto/update-project.dto';
+import mongoose from 'mongoose';
 
 @Controller('projects')
 export class ProjectsController {
   constructor(private readonly projectsService: ProjectsService) {}
 
   @Post()
-  create(@Body() project: Project) {
-    this.projectsService.create(project);
+  create(@Body() createProjectDto: CreateProjectDto) {
+    return this.projectsService.create(createProjectDto);
   }
 
   @Get()
   findAll() {
     return this.projectsService.findAll();
   }
+  @Get('user=:id')
+  findAllFromUser(@Param('id') id: string) {
+    return this.projectsService.findAllFromUser(
+      new mongoose.Types.ObjectId(id),
+    );
+  }
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.projectsService.findOne(+id);
+    return this.projectsService.findOne(id);
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() project: Project) {
-    return this.projectsService.update(+id, project);
+  update(@Param('id') id: string, @Body() updateProjectDto: UpdateProjectDto) {
+    return this.projectsService.update(
+      new mongoose.Types.ObjectId(id),
+      updateProjectDto,
+    );
   }
 
   @Delete(':id')

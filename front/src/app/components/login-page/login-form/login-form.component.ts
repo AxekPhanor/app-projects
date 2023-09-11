@@ -17,7 +17,8 @@ export class LoginFormComponent {
   @Output() eventSpinner = new EventEmitter<boolean>();
   @Output() eventUserNotFound = new EventEmitter<boolean>();
 
-  user = new User();
+  user = new User;
+
   private fb = inject(FormBuilder);
   addressForm = this.fb.group({
     username: [null, Validators.required],
@@ -27,18 +28,17 @@ export class LoginFormComponent {
 
   onSubmit(): void {
     this.eventSpinner.emit(true);
-    setTimeout(() => {
-      this.getUser();
-      this.eventSpinner.emit(false);
-    }, 1000);
-
+    this.getUser();
   }
 
   async getUser() {
     this.user.username = this.addressForm.value.username!;
+    console.log(this.user.username);
     this.LoginService.getByUsername(this.user.username).subscribe({
       next: (data) => {
         this.LoginService.isConnected();
+        this.LoginService.setUserId(data._id!);
+        console.log(data._id);
         this.redirect();
       },
       error: (e) => {
