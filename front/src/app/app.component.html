@@ -4,7 +4,7 @@
     <mat-toolbar color="primary">
       <span>app-projects</span>
       <a class="logout" href="/login">
-        <span color="secondary" class="material-icons">logout</span>
+        <span *ngIf=loginState color="secondary" class="material-icons">logout</span>
       </a>
     </mat-toolbar>
     <!-- Add Content Here -->

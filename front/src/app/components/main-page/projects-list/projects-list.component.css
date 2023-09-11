@@ -7,16 +7,17 @@
 
 mat-card{
   height: 190px;
-  width: 1200px;
+  width: auto;
 
 }
 
 p{
-  width: 1080px;
+  margin-right: 10%;
   height: 110px;
   overflow-wrap: break-word;
   overflow-y: auto;
   white-space: normal;
+
 }
 
 

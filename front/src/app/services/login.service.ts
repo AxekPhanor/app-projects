@@ -16,6 +16,9 @@ export class LoginService extends BaseService {
   isDisconnected(){
     sessionStorage.setItem('isConnected', 'false');
   }
+  getState(){
+    return sessionStorage.getItem('isConnected');
+  }
 
   findAll(){
     return this.http.get<any>(this.url);
