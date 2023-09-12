@@ -16,10 +16,10 @@ Le back lui contient une API qui communique avec mongoDB.
 
 
 ## Technologies utilisées
-- Node: 18.17.1
-- Angular: 16.2.3
+- Node.js - 18.17.1
+- Angular - 16.2.3
 - Angular Material - 16.2.3
-- Nest - 10.1.16
+- NestJS - 10.1.16
 - MongoDB - 6.0.9
 
 
