@@ -43,7 +43,7 @@ Proceed to describe how to install / setup one's local environment / get started
 
 
 ## Etat du projet
-Le projet est : _en cours_ 
+Le projet est : _Terminé_ 
 
 
 ## Améliorations possible

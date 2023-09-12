@@ -31,7 +31,6 @@ export class FormComponent {
     const id = this.route.snapshot.paramMap.get('id');
     if (id != null) {
       this.getProject(id);
-
     }
   }
 
@@ -42,7 +41,7 @@ export class FormComponent {
     if (this.project._id != null) {
       this.updateProject(); //--- ADD FORM PART ---//
     } else {
-
+      console.log("test");
       this.createProject(); //--- EDIT FORM PART ---//
     }
   }
@@ -80,7 +79,8 @@ export class FormComponent {
   createProject() {
     this.project.reference = this.addressForm.value.reference!;
     this.project.description = this.addressForm.value.description!;
-    this.ProjectsService.updateProject(this.project).subscribe({
+    this.project.user_id = this.LoginService.getUserId()!;
+    this.ProjectsService.createProject(this.project).subscribe({
       next: data => {
         this.DialogService.editProject();
       },
