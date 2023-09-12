@@ -62,7 +62,7 @@ export class FormComponent {
     this.ProjectsService.updateProject(this.project).subscribe({
       next: data => {
         console.log(data);
-        this.DialogService.addProject();
+        this.DialogService.editProject();
       },
       error: (e) => {
         console.log(e);
@@ -74,7 +74,7 @@ export class FormComponent {
     this.project.user_id = this.LoginService.getUserId()!;
     this.ProjectsService.createProject(this.project).subscribe({
       next: data => {
-        this.DialogService.editProject();
+        this.DialogService.addProject();
       },
       error: (e) => {
         console.log(e);

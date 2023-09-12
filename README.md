@@ -45,13 +45,6 @@ Installer avec npm pour le back et le front:
 npm install
 ```
 
-
-Maintenant que les installations sont terminé, vous pouvez lancer l'app front et l'app back dans leur terminaux respectif avec la commande:
-```
-npm start
-```
-
-
 Pour que votre back communique avec votre base de données mongoDB, il faut en créer une ! [MongoDB](https://www.mongodb.com/fr-fr)
 
 Une fois vous avez créer votre base de données ouvrez '\projet\app-projects\back.env' et ajouter votre URI pour communiquer avec mongoDB.
@@ -60,8 +53,15 @@ Exemple :
 URI=mongodb+srv://<user>:<password>@serverlessinstance0.m7exemp.mongodb.net/
 ```
 
-
 > Si vous voulez tester l'app sans avoir à créer la base de données par vous même n'hesitez pas à me contacter pour que je vous donne accès à ma base de données. 
+
+
+Maintenant que les installations sont terminé, vous pouvez lancer l'app front et l'app back dans leur terminaux respectif avec la commande:
+```
+npm start
+```
+
+Et voilà vous accès au site app-projects : [http://localhost:4200/](http://localhost:4200/)
 
 
 ## Etat du projet
