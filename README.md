@@ -39,7 +39,7 @@ git clone 'https://github.com/AxekPhanor/app-projects.git'
 ```
 
 
-Ensuite, une fois que vous êtes dans le dossier du projet, ouvrez 2 terminals, un dans le dossier front et l'autre dans le dossier back.
+Ensuite, une fois que vous êtes dans le dossier du projet, ouvrez 2 terminaux, un dans le dossier front et l'autre dans le dossier back.
 Installer avec npm pour le back et le front: 
 ```
 npm install
