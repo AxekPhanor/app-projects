@@ -1,5 +1,5 @@
 # app-projects
-> app-projects est application web avec une page de connexion, et une liste des projets où on peut ajouter ou modifier un projet.
+> Ce projet est un défi qu'il m'a été donné. J'ai eu 2 semaines pour apprendre les bases de Angular et Node.js
 
 ## Sommaire
 * [Information Générales](#general-information)
@@ -14,10 +14,13 @@
 
 ## Informations Générales
 
-- Provide general information about your project here.
-- What problem does it (intend to) solve?
-- What is the purpose of your project?
-- Why did you undertake it?
+app-projects est composé de 2 dossiers, le front contient l'application client, et le back l'application serveur.
+Le front contient une page de : 
+- connexion avec un username
+- liste des projets de l'utilisateur connecté
+- création ou edition de projet
+Le back lui contient une API qui communique avec mongoDB.
+
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
 
@@ -36,10 +39,33 @@ Fonctionnalités disponible :
 - Page pour editer ou ajouter un projet
 
 
-## Installation
-What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
+## Installation et Usage
+Pour essayer l'application vous aller télécharger le projet est faire fonctionner en local sur votre machine le front et le back.
 
-Proceed to describe how to install / setup one's local environment / get started with the project.
+Pour télécharger le projet:
+```
+git clone 'https://github.com/AxekPhanor/app-projects.git'
+```
+
+Ensuite, une fois que vous êtes dans le dossier du projet, ouvrez 2 terminals, un dans le dossier front et l'autre dans le dossier back.
+Installer avec npm pour le back et le front: 
+```
+npm install
+```
+
+Maintenant que les installations sont terminé, vous pouvez lancer l'app front et l'app back dans leur terminaux respectif avec la commande:
+```
+npm start
+```
+
+Pour que votre back communique avec votre base de données mongoDB, il faut en créer une ! [MongoDB](https://www.mongodb.com/fr-fr)
+Une fois vous avez créer votre base de données ouvrez '\projet\app-projects\back.env' et ajouter votre URI pour communiquer avec mongoDB.
+Exemple :
+```
+URI=mongodb+srv://<user>:<password>@serverlessinstance0.m7exemp.mongodb.net/
+```
+
+> Si vous voulez tester l'app sans avoir à créer la base de données par vous même n'hesitez pas à me contacter pour que je vous donne accès à ma base de données. 
 
 
 ## Etat du projet
