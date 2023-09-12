@@ -13,11 +13,4 @@ export abstract class BaseService {
   constructor(protected http: HttpClient) {
     this.url = 'http://localhost:3000/';
   }
-
-  getById(id: number): Observable<any> {
-    return this.http.get<any>(this.url+'/'+id);
-  }
-
-  abstract findAll(): Observable<any>;
-
 }

@@ -1,8 +1,6 @@
 .list{
   min-height: 200px;
   width: 100%;
-
-
 }
 
 mat-card{
@@ -19,7 +17,6 @@ p{
   white-space: normal;
 
 }
-
 
 .editButton{
   right: 1em;

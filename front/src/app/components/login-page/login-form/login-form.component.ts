@@ -33,12 +33,10 @@ export class LoginFormComponent {
 
   async getUser() {
     this.user.username = this.addressForm.value.username!;
-    console.log(this.user.username);
     this.LoginService.getByUsername(this.user.username).subscribe({
       next: (data) => {
         this.LoginService.isConnected();
         this.LoginService.setUserId(data._id!);
-        console.log(data._id);
         this.redirect();
       },
       error: (e) => {

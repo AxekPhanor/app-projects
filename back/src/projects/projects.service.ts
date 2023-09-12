@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateProjectDto } from './dto/create-project.dto';
 import { UpdateProjectDto } from './dto/update-project.dto';
 import { InjectModel } from '@nestjs/mongoose';
@@ -17,15 +17,27 @@ export class ProjectsService {
   }
 
   async findAll(): Promise<Project[]> {
-    return this.projectModel.find().exec();
+    const projects = await this.projectModel.find().exec();
+    if (!projects) {
+      throw new NotFoundException(`Project ${projects} not found`);
+    }
+    return projects;
   }
 
   async findAllFromUser(userId: mongoose.Types.ObjectId): Promise<Project[]> {
-    return this.projectModel.find({ user_id: userId }).exec();
+    const projects = await this.projectModel.find({ user_id: userId }).exec();
+    if (!projects) {
+      throw new NotFoundException(`Projects ${projects} not found`);
+    }
+    return projects;
   }
 
   async findOne(id: string) {
-    return this.projectModel.findOne({ _id: id }).exec();
+    const project = await this.projectModel.findOne({ _id: id }).exec();
+    if (!project) {
+      throw new NotFoundException(`Project ${project} not found`);
+    }
+    return project;
   }
 
   async update(
@@ -39,6 +51,9 @@ export class ProjectsService {
         new: true,
       },
     );
+    if (!project) {
+      throw new NotFoundException(`Project ${project} not found`);
+    }
     return project;
   }
 

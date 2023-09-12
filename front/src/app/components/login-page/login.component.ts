@@ -27,15 +27,15 @@ export class LoginComponent {
     private DialogService: DialogService,
     public dialog: MatDialog) { }
 
+  ngOnInit() {
+    this.LoginService.isDisconnected();
+  }
+
   isSpinning(spinner: boolean) {
     this.spinner = spinner;
   }
 
   openDialog(){
     this.DialogService.userNotFound();
-  }
-
-  ngOnInit() {
-    this.LoginService.isDisconnected();
   }
 }

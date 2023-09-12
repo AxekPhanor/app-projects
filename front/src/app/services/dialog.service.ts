@@ -43,4 +43,16 @@ export class DialogService {
       }
     });
   }
+
+  custom(title: string, content: string, buttonLabel: string, style: string, href: string){
+    this.dialog.open(DialogComponent,{
+      data:{
+        title: title,
+        content: content,
+        buttonLabel: buttonLabel,
+        style: style,
+        href: href
+      }
+    });
+  }
 }

@@ -19,8 +19,6 @@ export class ProjectsListComponent {
       next: (data: any) => {
         if(data) {
           this.projects = data;
-          console.log(this.projects);
-          sessionStorage.setItem('projectsQuantity', this.projects.length.toString());
         }
       }
     });

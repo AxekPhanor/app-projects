@@ -12,10 +12,6 @@ export class ProjectsService extends BaseService {
     return this.http.get<Project>(this.url+'/'+_id)
   }
 
-  findAll(){
-    return this.http.get<Project>(this.url);
-  }
-
   findAllFromUser(userId: string){
     return this.http.get<Project>(this.url+'/user='+userId);
   }
