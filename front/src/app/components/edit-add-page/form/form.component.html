@@ -7,14 +7,14 @@
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput value="{{project.reference}}" placeholder="Reference" formControlName="reference" autocomplete="off">
+            <input matInput [(ngModel)]="project.reference" placeholder="Reference" formControlName="reference" autocomplete="off">
           </mat-form-field>
         </div>
       </div>
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <textarea id="description" rows="6" matInput value="{{project.description}}" class="description" placeholder="Description" formControlName="description" autocomplete="off"></textarea>
+            <textarea id="description" rows="6" matInput [(ngModel)]="project.description" class="description" placeholder="Description" formControlName="description" autocomplete="off"></textarea>
           </mat-form-field>
         </div>
       </div>

@@ -35,13 +35,10 @@ export class FormComponent {
   }
 
   onSubmit() {
-    if (this.addressForm.value.reference == null || this.addressForm.value.reference == null) {
-      this.DialogService.custom("Error", "", "Close", "red", "edit-add");
-    }
     if (this.project._id != null) {
       this.updateProject(); //--- ADD FORM PART ---//
+      console.log('yeye')
     } else {
-      console.log("test");
       this.createProject(); //--- EDIT FORM PART ---//
     }
   }
@@ -59,12 +56,10 @@ export class FormComponent {
     })
   }
 
+
   updateProject() {
-    if(this.addressForm.value.reference != null || this.addressForm.value.reference != null) { // Si les valeurs ne sont pas touchés
-      this.project.reference = this.addressForm.value.reference!;
-      this.project.description = this.addressForm.value.description!;
-    }
     this.project.user_id = this.LoginService.getUserId()!;
+    console.log(this.project);
     this.ProjectsService.updateProject(this.project).subscribe({
       next: data => {
         console.log(data);
@@ -77,8 +72,6 @@ export class FormComponent {
   }
 
   createProject() {
-    this.project.reference = this.addressForm.value.reference!;
-    this.project.description = this.addressForm.value.description!;
     this.project.user_id = this.LoginService.getUserId()!;
     this.ProjectsService.createProject(this.project).subscribe({
       next: data => {
