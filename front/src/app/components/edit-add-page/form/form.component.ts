@@ -56,7 +56,6 @@ export class FormComponent {
     })
   }
 
-
   updateProject() {
     this.project.user_id = this.LoginService.getUserId()!;
     console.log(this.project);
