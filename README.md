@@ -77,4 +77,7 @@ Améliorations possible:
 ## Contact
 Créer par [@AxekPhanor](https://github.com/AxekPhanor)
 
+Mail : axel.phanor64@gmail.com
+
+
 
