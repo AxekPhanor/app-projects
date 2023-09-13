@@ -71,7 +71,7 @@ Le projet est : _Terminé_
 ## Améliorations possibles
 
 Améliorations possibles:
-- Avoir une connexion sécurisé utilisant OAuth2
+- Avoir une connexion sécurisé utilisant jwt
 - Pouvoir supprimer un projet
 
 ## Contact
