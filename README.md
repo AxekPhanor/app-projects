@@ -56,7 +56,7 @@ URI=mongodb+srv://<user>:<password>@serverlessinstance0.m7exemp.mongodb.net/
 > Si vous voulez tester l'app sans avoir à créer la base de données par vous même n'hesitez pas à me contacter pour que je vous donne accès à ma base de données. 
 
 
-Maintenant que les installations sont terminé, vous pouvez lancer l'app front et l'app back dans leur terminaux respectif avec la commande:
+Maintenant que les installations sont terminées, vous pouvez lancer l'app front et l'app back dans leurs terminaux respectifs avec la commande:
 ```
 npm start
 ```
@@ -68,10 +68,10 @@ Et voilà vous accès au site app-projects : [http://localhost:4200/](http://loc
 Le projet est : _Terminé_ 
 
 
-## Améliorations possible
+## Améliorations possibles
 
-Améliorations possible:
-- Avoir une connexion sécurisé utilisant OAuth2
+Améliorations possibles:
+- Avoir une connexion sécurisé utilisant jwt
 - Pouvoir supprimer un projet
 
 ## Contact
