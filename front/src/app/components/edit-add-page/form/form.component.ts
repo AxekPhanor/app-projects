@@ -37,7 +37,6 @@ export class FormComponent {
   onSubmit() {
     if (this.project._id != null) {
       this.updateProject(); //--- ADD FORM PART ---//
-      console.log('yeye')
     } else {
       this.createProject(); //--- EDIT FORM PART ---//
     }
